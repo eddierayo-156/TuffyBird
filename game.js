@@ -284,6 +284,7 @@ const pipes = {
         if(state.current !== state.game) return;
 
         if(score.value < 5) {
+            pipes.gap = 150;
             if(frames%150 == 0){
                 this.position.push({
                     x : cvs.width,
@@ -293,6 +294,7 @@ const pipes = {
         }
         else if(score.value < 10) {
             if(frames%100 == 0){
+                pipes.gap = 130;
                 this.position.push({
                     x : cvs.width,
                     y : this.maxYPos * ( Math.random() + 1)
@@ -301,6 +303,7 @@ const pipes = {
         }
         else if (score.value < 20) {
             if(frames%80 == 0){
+                pipes.gap = 110;
                 this.position.push({
                     x : cvs.width,
                     y : this.maxYPos * ( Math.random() + 1)
